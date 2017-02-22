@@ -39,17 +39,19 @@ export class AppComponent
     this.GetCurrentWeatherByName();
   }
 
+  // Get weather by Name
   private GetCurrentWeatherByZip()
   {
     this.GetCurrentWeather(this.zip + "," + this.countryCode);
   }
 
+  // Get Weather by Zip & Country code
   private GetCurrentWeatherByName()
   {
     this.GetCurrentWeather(this.city);
   }
 
-
+  // Fetch current weather
   private GetCurrentWeather(arg: string)
   {
     // Get current weather
