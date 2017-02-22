@@ -1,0 +1,40 @@
+h1 {
+  font-family: Helvetica;
+  font-weight: 100;
+}
+
+h2 {
+  font-family: Helvetica;
+  font-weight: 100;
+  color: #212121;
+}
+
+h3 {
+  font-family: Helvetica;
+  font-weight: 100;
+  color: #212121;
+}
+
+label {
+  font-family: Helvetica;
+  font-weight: 100;
+  color: #212121;
+}
+
+button {
+  font-family: Helvetica;
+  font-weight: 300;
+}
+
+p {
+  font-family: Helvetica;
+  font-weight: 100;
+  color: #212121;
+}
+
+p.it {
+  font-family: Helvetica;
+  font-style: italic;
+  font-weight: 100;
+  color: darkgray;
+}

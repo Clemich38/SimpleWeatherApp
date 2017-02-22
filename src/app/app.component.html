@@ -1,0 +1,87 @@
+<h1 class="center aqua">
+  {{title}}
+</h1>
+
+<div class=" p3">
+  <div class="flex mxn2">
+    <div class="flex-none p2">
+      
+      <form (ngSubmit)="GetCurrentWeatherByName()" class="sm-col-12 py2">
+        <label>City Name</label>
+        <input type="text" [(ngModel)]="city" [ngModelOptions]="{standalone: true}" class="block col-12 mb1 field">
+        <button type="submit" class="h5 btn btn-outline mb1 aqua">Get Weather</button>
+      </form>
+
+      <form (ngSubmit)="GetCurrentWeatherByZip()"class="sm-col-12 py2">
+        <label>Zip Code</label>
+        <input type="text" [(ngModel)]="zip" [ngModelOptions]="{standalone: true}" class="block col-12 mb1 field">
+        <label>Country Code</label>
+        <input type="text" [(ngModel)]="countryCode" [ngModelOptions]="{standalone: true}" class="block col-12 mb1 field">
+        <button type="submit" class="h5 btn btn-outline mb1 aqua">Get Weather</button>
+      </form>
+
+    </div>
+
+    <div class="flex-auto p2">
+    </div>
+
+    <div class="flex-auto p2">
+      
+      <div *ngIf="currentTemp" class="current">
+        <h2 text-lowercase text-capitalize center>Weather in {{currentCity}}</h2>
+
+        <div class="flex mxn2">
+
+          <!-- Weather Icon & temperature -->
+          <div class="flex-auto p2">
+            <img src="http://openweathermap.org/img/w/{{currentWeatherIcon}}.png">
+          </div>
+          <div class="flex-auto p2">
+            <h2>{{currentTemp}}°</h2>
+          </div>
+        </div>
+
+        <h3 class="mb3">{{currentWeatherDescription}}</h3>
+
+        <div class="flex mxn2">
+          <!-- Wind speed -->
+          <div class="flex-auto px2">
+            <p>Wind:</p>
+          </div>
+          <div class="flex-auto px2">
+            <p>{{currentWindSpeed}} m/s</p>
+          </div>
+        </div>
+
+        <div class="flex mxn2">
+          <!-- Pressure -->
+          <div class="flex-auto px2">
+            <p>Pressure:</p>
+          </div>
+          <div class="flex-auto px2">
+            <p>{{currentPressure}} hpa</p>
+          </div>
+        </div>
+
+        <div class="flex mxn2">
+          <!-- Humidity -->
+          <div class="flex-auto px2">
+            <p>Humidity:</p>
+          </div>
+          <div class="flex-auto px2">
+            <p>{{currentHumidityLevel}} %</p>
+          </div>
+
+        </div>
+
+        <p class="it">Last update: {{currentDate | date:'EEEE HH:mm'}}</p>
+
+      </div>
+
+    </div>
+
+    <div class="flex-auto p2">
+    </div>
+    
+  </div>
+</div>
